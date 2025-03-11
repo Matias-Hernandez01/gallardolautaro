@@ -1,12 +1,13 @@
 import React from 'react'
 import { Navbar } from '../../components'
+import style from "./home.module.css"
 
 const Home = () => {
   return (
-    <div className='container'>
-      <div className="navBar">
+    <div className={style.container}>
+      <div className={style.navBar}>
         <Navbar/>
-      </div>
+{}      </div>
     </div>
   )
 }
