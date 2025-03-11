@@ -1,4 +1,76 @@
-.icon {
-  width: 40px;
-  height: 40px;
+.menu {
+  background-color: transparent !important;
+  border-radius: 5px;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.2);
+  width: 100px;
+}
+
+.menuItem {
+  color: black !important;
+  padding: 10px;
+}
+
+.menuItem:hover {
+  background-color: grey 0.5 !important;
+  font-size: 18px;
+  font-style:normal;
+}
+
+
+@media (max-width: 480px){
+  .menu{
+    display: flex;
+  }
+
+  .menuItem{
+    display: flex;
+  }
+
+  .button{
+    display: flex;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 767px){
+  
+  .menu{
+    display: flex;
+  }
+
+}
+
+@media (min-width: 768px) and (max-width:1024px){
+  .menu{
+    display: flex;
+    width: 200px;
+  }
+  .menuItem{
+    display: flex;
+    width: 200px;
+  }
+
+  
+}
+@media (min-width: 1025px) and (max-width: 1440px) {
+  .menu {
+    display: none;
+  }
+
+  .menuItem{
+    display: none;
+  }
+
+  .button{
+    display: none;
+  }
+}
+
+@media (min-width: 1441px){
+  .button{
+    display: none;
+  }
+
+  .menu{
+    display: none;
+  }
 }
