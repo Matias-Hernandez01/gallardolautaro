@@ -1,25 +1,51 @@
+import * as React from 'react';
+import Button from '@mui/material/Button';
+import Menu from '@mui/material/Menu';
+import MenuItem from '@mui/material/MenuItem';
 import DehazeIcon from '@mui/icons-material/Dehaze';
-import ClearIcon from '@mui/icons-material/Clear';
-import { useState } from 'react';
 import style from "./ButtonMenu.module.css"
 
-const ButtonMenu = () => {
 
-  const [ buttonState, setButtonState] = useState(false);
-
-  const buttonOn = ()=>{
-    setButtonState();
-    
-  }
+export default function BasicMenu() {
+  const [anchorEl, setAnchorEl] = React.useState(null);
+  const open = Boolean(anchorEl);
+  const handleClick = (event) => {
+    setAnchorEl(event.currentTarget);
+  };
+  const handleClose = () => {
+    setAnchorEl(null);
+  };
 
   return (
-    <div className="divConteiner">
-      <div className="boxButton"  >
-       <DehazeIcon className={style.icon} />
-      </div>
-      {/* <ClearIcon /> */}
+    <div>
+      <Button
+        id="basic-button"
+        aria-controls={open ? 'basic-menu' : undefined}
+        aria-haspopup="true"
+        aria-expanded={open ? 'true' : undefined}
+        onClick={handleClick}
+          className={style.button}
+        >
+        <DehazeIcon sx={{fontSize: 50, color: 'black', strokeLinecap: "round", strokeLinejoin:"round"}}
+          strokeLinecap="round"
+  />
+        </Button>
+      <Menu
+        id="basic-menu"
+        anchorEl={anchorEl}
+        open={open}
+        onClose={handleClose}
+        MenuListProps={{
+          'aria-labelledby': 'basic-button',
+        }}
+        classes={{paper: style.menu}}
+>
+        <MenuItem className={style.menuItem} onClick={handleClose}>Redes</MenuItem>
+        <MenuItem className={style.menuItem} onClick={handleClose}>Flyers</MenuItem>
+        <MenuItem className={style.menuItem} onClick={handleClose}>Fotos</MenuItem>
+        <MenuItem className={style.menuItem} onClick={handleClose}>Videos</MenuItem>
+        <MenuItem className={style.menuItem} onClick={handleClose}>Sobre mi</MenuItem>
+      </Menu>
     </div>
-  )
+  );
 }
-
-export default ButtonMenu
