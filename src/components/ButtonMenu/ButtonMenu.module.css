@@ -13,64 +13,59 @@
 .menuItem:hover {
   background-color: grey 0.5 !important;
   font-size: 18px;
-  font-style:normal;
+  font-style: normal;
 }
 
-
-@media (max-width: 480px){
-  .menu{
+@media (max-width: 480px) {
+  .menu {
     display: flex;
   }
 
-  .menuItem{
+  .menuItem {
     display: flex;
   }
 
-  .button{
+  .button {
     display: flex;
   }
 }
 
-@media (min-width: 481px) and (max-width: 767px){
-  
-  .menu{
+@media (min-width: 481px) and (max-width: 767px) {
+  .menu {
     display: flex;
   }
-
 }
 
-@media (min-width: 768px) and (max-width:1024px){
-  .menu{
+@media (min-width: 768px) and (max-width: 1024px) {
+  .menu {
     display: flex;
     width: 200px;
   }
-  .menuItem{
+  .menuItem {
     display: flex;
     width: 200px;
   }
-
-  
 }
 @media (min-width: 1025px) and (max-width: 1440px) {
   .menu {
     display: none;
   }
 
-  .menuItem{
+  .menuItem {
     display: none;
   }
 
-  .button{
+  .button {
     display: none;
   }
 }
 
-@media (min-width: 1441px){
-  .button{
+@media (min-width: 1441px) {
+  .button {
     display: none;
   }
 
-  .menu{
+  .menu {
     display: none;
   }
 }

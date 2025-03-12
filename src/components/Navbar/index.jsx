@@ -15,7 +15,7 @@ export const Navbar = () => {
       <div className={style.buttonContainer}>
         <div className={style.containerButtons}>
           {MENU_MOCK.map((menu) => (
-            <a href={menu.href} className={style.buttons} key={menu.href}>
+            <a href={menu.url} className={style.buttons} key={menu.url}>
               {menu.label}
             </a>
           ))}

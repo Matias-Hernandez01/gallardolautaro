@@ -1,22 +1,22 @@
 export const MENU_MOCK = [
   {
     label: 'Redes',
-    href: '/redes',
+    url: '/redes',
   },
   {
     label: 'Flyers',
-    href: '/flyers',
+    url: '/flyers',
   },
   {
     label: 'Fotos',
-    href: '/fotos',
+    url: '/fotos',
   },
   {
     label: 'Videos',
-    href: '/videos',
+    url: '/videos',
   },
   {
     label: 'Sobre mí',
-    href: '/sobreMi',
+    url: '/sobreMi',
   },
 ];

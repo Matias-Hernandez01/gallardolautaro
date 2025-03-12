@@ -1,4 +1,4 @@
-.divContainer{
+.divContainer {
   width: 100%;
   height: 80px;
   background-color: grey;
@@ -6,15 +6,12 @@
   justify-content: space-between;
 }
 
-
-.containerTitle{
+.containerTitle {
   flex-grow: 1;
   height: 100%;
 }
 
-
-
-.button{
+.button {
   width: 30%;
   height: 100%;
   display: flex;
@@ -30,77 +27,74 @@
   width: 300px;
 } */
 
-@media (max-width: 480px){
-  .buttonContainer{
+@media (max-width: 480px) {
+  .buttonContainer {
     display: none;
   }
 }
 
-
-@media(min-width: 481px) and (max-width:767px){
-  .buttonContainer{
+@media (min-width: 481px) and (max-width: 767px) {
+  .buttonContainer {
     display: none;
   }
 }
 
-@media (min-width: 768px)and (max-width: 1024px){
-  .buttonContainer{
+@media (min-width: 768px) and (max-width: 1024px) {
+  .buttonContainer {
     display: none;
   }
 }
 
-@media (min-width:1025px) and (max-width: 1160px) {
-  .button{
+@media (min-width: 1025px) and (max-width: 1160px) {
+  .button {
     display: none;
   }
 
-  .buttonContainer{
+  .buttonContainer {
     width: 50%;
-    display:flex;
+    display: flex;
     justify-content: space-between;
     align-items: center;
   }
 
-  .buttons{
+  .buttons {
     margin: 20px;
     font-size: 20px;
   }
 }
 
 @media (min-width: 1161px) and (max-width: 1300px) {
-  .button{
+  .button {
     display: none;
   }
 
-  .buttonContainer{
+  .buttonContainer {
     display: flex;
     width: 45%;
     justify-content: space-between;
     align-items: center;
   }
 
-  .buttons{
-    margin:20px;
+  .buttons {
+    margin: 20px;
     font-size: 20px;
   }
 }
 
-@media (min-width: 1301px){
-  .buttonContainer{
+@media (min-width: 1301px) {
+  .buttonContainer {
     display: flex;
-    width:43%;
+    width: 43%;
     justify-content: space-between;
     align-items: center;
   }
 
-  .button{
+  .button {
     display: none;
   }
 
-  .buttons{
-    margin:25px;
+  .buttons {
+    margin: 25px;
     font-size: 20px;
   }
 }
-
-

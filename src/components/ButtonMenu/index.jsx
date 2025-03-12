@@ -53,7 +53,7 @@ export const ButtonMenu = () => {
           <MenuItem
             className={style.menuItem}
             onClick={handleClose}
-            key={menu.href}
+            key={menu.url}
           >
             {menu.label}
           </MenuItem>
