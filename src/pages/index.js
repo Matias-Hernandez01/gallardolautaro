@@ -1,5 +1,5 @@
 export * from './flyers';
-export * from './home';
+export * from './Home';
 export * from './networks';
 export * from './pictures';
 export * from './videoclips';

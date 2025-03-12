@@ -2,8 +2,8 @@ import { Navbar } from '../../components';
 
 import style from './home.module.css';
 
-export const home = () => (
-  <div className={`${style.container} ${style.navBar}`}>
+export const Home = () => (
+  <div className={`${style.container}`}>
     <Navbar />
   </div>
 );

@@ -1,7 +1,6 @@
 .divContainer {
   width: 100%;
   height: 80px;
-  background-color: #808080;
   display: flex;
   justify-content: space-between;
 }
@@ -9,6 +8,9 @@
 .containerTitle {
   flex-grow: 1;
   height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .button {
@@ -19,13 +21,24 @@
   align-items: center;
 }
 
-/* .containerButtons{
+.buttons{
+  color:#ffffff;
+  text-decoration: none;
+  font-family: "Geoform";
+}
+
+.containerButtons{
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: blue;
-  width: 300px;
-} */
+  width: 95%;
+}
+
+
+.imageTitle{
+  width: 60%;
+  height: 60%;
+}
 
 @media (max-width: 480px) {
   .buttonContainer {
@@ -33,19 +46,19 @@
   }
 }
 
-@media (min-width: 481px) and (max-width: 767px) {
+@media (min-width: 480px) and (max-width: 767px) {
   .buttonContainer {
     display: none;
   }
 }
 
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (min-width: 767px) and (max-width: 1024px) {
   .buttonContainer {
     display: none;
   }
 }
 
-@media (min-width: 1025px) and (max-width: 1160px) {
+@media (min-width: 1024px) and (max-width: 1160px) {
   .button {
     display: none;
   }
@@ -59,11 +72,11 @@
 
   .buttons {
     margin: 20px;
-    font-size: 20px;
+    font-size: 17px;
   }
 }
 
-@media (min-width: 1161px) and (max-width: 1300px) {
+@media (min-width: 1160px) and (max-width: 1300px) {
   .button {
     display: none;
   }
@@ -77,14 +90,14 @@
 
   .buttons {
     margin: 20px;
-    font-size: 20px;
+    font-size: 19px;
   }
 }
 
-@media (min-width: 1301px) {
+@media (min-width: 1300px) {
   .buttonContainer {
     display: flex;
-    width: 43%;
+    width: 45%;
     justify-content: space-between;
     align-items: center;
   }
@@ -94,7 +107,7 @@
   }
 
   .buttons {
-    margin: 25px;
-    font-size: 20px;
+    margin: 20px;
+    font-size: 18px;
   }
 }

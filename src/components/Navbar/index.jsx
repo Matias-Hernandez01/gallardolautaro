@@ -1,14 +1,15 @@
 import { ButtonMenu } from '../';
 
-import { texts } from '../../config/text';
 import { MENU_MOCK } from '../../shared/mock';
+import image from "../../assets/LAUTIGALLARDOLOGO.png";
 
 import style from './Navbar.module.css';
 
 export const Navbar = () => (
   <div className={style.divContainer}>
+
     <div className={style.containerTitle}>
-      <h1 className={style.title}>{texts.header.title}</h1>
+      <img src={image} className={style.imageTitle} />
     </div>
 
     <div className={style.buttonContainer}>
