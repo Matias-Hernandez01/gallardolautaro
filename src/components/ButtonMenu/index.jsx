@@ -5,9 +5,11 @@ import DehazeIcon from '@mui/icons-material/Dehaze';
 import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
 
+import { MENU_MOCK } from '../../shared/mock';
+
 import style from './ButtonMenu.module.css';
 
-export const ButtonMenu = (menus) => {
+export const ButtonMenu = () => {
   const [anchorEl, setAnchorEl] = useState(null);
   const open = Boolean(anchorEl);
   const handleClick = (event) => {
@@ -47,7 +49,7 @@ export const ButtonMenu = (menus) => {
         }}
         classes={{ paper: style.menu }}
       >
-        {menus.map((menu) => (
+        {MENU_MOCK.map((menu) => (
           <MenuItem
             className={style.menuItem}
             onClick={handleClose}
