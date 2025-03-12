@@ -44,9 +44,7 @@ export const ButtonMenu = () => {
         anchorEl={anchorEl}
         open={open}
         onClose={handleClose}
-        MenuListProps={{
-          'aria-labelledby': 'basic-button',
-        }}
+        MenuListProps={{ 'aria-labelledby': 'basic-button' }}
         classes={{ paper: style.menu }}
       >
         {MENU_MOCK.map((menu) => (

@@ -5,26 +5,24 @@ import { MENU_MOCK } from '../../shared/mock';
 
 import style from './Navbar.module.css';
 
-export const Navbar = () => {
-  return (
-    <div className={style.divContainer}>
-      <div className={style.containerTitle}>
-        <h1 className={style.title}>{texts.header.title}</h1>
-      </div>
+export const Navbar = () => (
+  <div className={style.divContainer}>
+    <div className={style.containerTitle}>
+      <h1 className={style.title}>{texts.header.title}</h1>
+    </div>
 
-      <div className={style.buttonContainer}>
-        <div className={style.containerButtons}>
-          {MENU_MOCK.map((menu) => (
-            <a href={menu.url} className={style.buttons} key={menu.url}>
-              {menu.label}
-            </a>
-          ))}
-        </div>
-      </div>
-
-      <div className={style.button}>
-        <ButtonMenu />
+    <div className={style.buttonContainer}>
+      <div className={style.containerButtons}>
+        {MENU_MOCK.map((menu) => (
+          <a href={menu.url} className={style.buttons} key={menu.url}>
+            {menu.label}
+          </a>
+        ))}
       </div>
     </div>
-  );
-};
+
+    <div className={style.button}>
+      <ButtonMenu />
+    </div>
+  </div>
+);
