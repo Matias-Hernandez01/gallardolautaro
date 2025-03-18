@@ -37,8 +37,8 @@
 
 
 .imageTitle{
-  width: 60%;
-  height: 60%;
+  width: 350px;
+  height: 42.25px;
 }
 
 @media (max-width: 480px) {
