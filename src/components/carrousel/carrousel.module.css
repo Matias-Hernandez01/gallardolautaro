@@ -1,0 +1,20 @@
+.containerCarrousel {
+  width: 90%;
+  height: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+
+.carousel-inner {
+  width: 100%;
+  height: 100%;
+}
+
+.images {
+  max-width: 100%;  /* Ajustar imagen al contenedor */
+  height: 100%;   /* Mantener proporciones */
+  object-fit: cover;
+}
