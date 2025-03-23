@@ -1,20 +1,52 @@
-.containerCarrousel {
+/* Centra las imágenes y ajusta el tamaño */
+.image {
+  width: 400px; /* Ajusta el tamaño según sea necesario */
+  height: 500px;
+  object-fit: cover; /* Evita distorsión de las imágenes */
+  border-radius: 15px; /* Opcional: bordes redondeados */
+  background-color: transparent;
+}
+
+/* Asegura que el contenedor ocupe todo el espacio */
+.container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  /* padding: 20px; */
+  background-color: transparent; /* Ajusta según el diseño */
+}
+
+/* Ajusta el Swiper */
+.swiper_container {
   width: 90%;
   height: 500px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  max-width: 1400px;
+  padding-top: 20px;
+  padding-bottom: 50px;
+  background-color: transparent;
   overflow: hidden;
 }
 
-
-.carousel-inner {
-  width: 100%;
-  height: 100%;
+/* Evita que los slides tengan un tamaño inconsistente */
+.swiper-slide {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: auto;
+  margin: 0;
+  padding: 0;
+  background-color: transparent;
 }
 
-.images {
-  max-width: 100%;  /* Ajustar imagen al contenedor */
-  height: 100%;   /* Mantener proporciones */
-  object-fit: cover;
+.heading{
+  color:white;
+  margin:20px;
+  font-family: "Geoform";
+  font-weight: 900;
+}
+
+.swiperBack{
+  background-color: transparent;
 }

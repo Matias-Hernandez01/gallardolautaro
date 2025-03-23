@@ -1,41 +1,93 @@
 import style from "./Carrousel.module.css"
-import callejeroFino from "../../assets/networks/callejeroFino.jpg"
-import damasgratis from "../../assets/networks/damasgratis.jpg"
-import thelaplanta from "../../assets/networks/thelaplanta.jpg"
-import sergiotorres from "../../assets/networks/sergiotorres.jpg"
 
-export const Carrousel = () => {
-  return <div>
-    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
-  <div class="carousel-indicators">
-    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
-    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
-  </div>
-  <div class="carousel-inner">
-    <div class="carousel-item active">
-      <img src={callejeroFino} className={`d-block w-100 ${style.images}`} alt="callejerofino"  />
+import sonoradinamita from "../../assets/networks/sonoradinamita.jpg";
+import sonoradinamita2 from "../../assets/networks/sonoradinamita2.jpg"
+
+
+import React from 'react';
+import { Swiper, SwiperSlide } from 'swiper/react';
+
+import 'swiper/css';
+import 'swiper/css/effect-coverflow';
+import 'swiper/css/pagination';
+import 'swiper/css/navigation';
+
+import { EffectCoverflow, Pagination, Navigation } from 'swiper/modules';
+
+import damasGratis from "../../assets/networks/damasgratis.jpg";
+import callejeroFino from "../../assets/networks/callejeroFino.jpg";
+import thelaplanta from "../../assets/networks/thelaplanta.jpg";
+import magonuevaluna from "../../assets/networks/magonuevaluna.jpg";
+import combolocoysergiotorres from "../../assets/networks/combolocoysergiotorres.jpg"
+
+
+
+export const Carrousel = () =>{
+ return (
+    <div className="container">
+      <h1 className={style.heading}>Redes sociales</h1>
+      <Swiper
+        effect={'coverflow'}
+        grabCursor={true}
+        centeredSlides={true}
+        loop={true}
+        slidesPerView={3}
+        spaceBetween={20}
+        coverflowEffect={{
+          rotate: 0,
+          stretch: 0,
+          depth: 100,
+          modifier: 2.5,
+          slideShadows:false,
+          
+        }}
+        pagination={{ el: '.swiper-pagination', clickable: true }}
+        navigation={{
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+          clickable: true,
+        }}
+        modules={[EffectCoverflow, Pagination, Navigation]}
+        className="swiper_container"
+        breakpoints={{
+          320: { slidesPerView: 2 },  // Celulares
+          768: { slidesPerView: 2 },  // Tablets
+          1024: { slidesPerView: 4}, // Pantallas grandes
+        }}
+      >
+        <SwiperSlide  className={style.swiperBack}  >
+          <img src={damasGratis} alt="slide_image"    className={style.image}  />
+        </SwiperSlide>
+        <SwiperSlide  className={style.swiperBack}  >
+          <img src={callejeroFino} alt="slide_image" className={style.image}  />
+        </SwiperSlide>
+        <SwiperSlide  className={style.swiperBack}  >
+          <img src={thelaplanta} alt="slide_image" className={style.image}  />
+        </SwiperSlide>
+        <SwiperSlide  className={style.swiperBack}  >
+          <img src={magonuevaluna} alt="slide_image" className={style.image}  />
+        </SwiperSlide>
+        <SwiperSlide  className={style.swiperBack}  >
+          <img src={combolocoysergiotorres} alt="slide_image" className={style.image}  />
+        </SwiperSlide>
+        <SwiperSlide  className={style.swiperBack}  >
+          <img src={sonoradinamita} alt="slide_image"   className={style.image} />
+        </SwiperSlide>
+        <SwiperSlide  className={style.swiperBack}  >
+          <img src={sonoradinamita2} alt="slide_image" className={style.image} />
+        </SwiperSlide>
+
+        <div className="slider-controler">
+          <div className="swiper-button-prev slider-arrow">
+            <ion-icon name="arrow-back-outline"></ion-icon>
+          </div>
+          <div className="swiper-button-next slider-arrow">
+            <ion-icon name="arrow-forward-outline"></ion-icon>
+          </div>
+          <div className="swiper-pagination"></div>
+        </div>
+      </Swiper>
     </div>
-    <div class="carousel-item">
-      <img src={damasgratis} className={`d-block w-100 ${style.images}`} alt="damasgratis"   />
-    </div>
-    <div class="carousel-item">
-      <img src={thelaplanta} className={`d-block w-100 ${style.images}`} alt="thelaplanta"  />
-    </div>
-    <div class="carousel-item">
-      <img src={sergiotorres} className={`d-block w-100 ${style.images}`} alt="sergiotorres"  />
-    </div>
-  </div>
-  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Previous</span>
-  </button>
-  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Next</span>
-  </button>
-</div>
-    </div>
-    
-};
+  );
+}
+
